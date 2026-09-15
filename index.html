@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vertex — Privacy Policy &amp; Terms of Service</title>
+<meta name="description" content="Privacy Policy and Terms of Service for Vertex, a personal productivity app by Noctascent.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0B0F1A;
+    --surface:#121829;
+    --surface-2:#161D33;
+    --line:rgba(124,58,237,.20);
+    --line-soft:rgba(255,255,255,.07);
+    --primary:#7C3AED;
+    --primary-soft:#A78BFA;
+    --text:#F3F4FA;
+    --muted:#98A0C2;
+    --ok:#4ADE80;
+    --measure:68ch;
+    --sans:"Plus Jakarta Sans",system-ui,-apple-system,Segoe UI,sans-serif;
+    --arabic:"IBM Plex Sans Arabic","Plus Jakarta Sans",system-ui,sans-serif;
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *{animation:none!important;transition:none!important}
+  }
+
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    font-size:16.5px;
+    line-height:1.72;
+    -webkit-font-smoothing:antialiased;
+  }
+  html[dir="rtl"] body{font-family:var(--arabic);line-height:1.95}
+
+  .wrap{max-width:var(--measure);margin:0 auto;padding:0 22px}
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky;top:0;z-index:20;
+    background:rgba(11,15,26,.88);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line-soft);
+  }
+  .bar{
+    max-width:var(--measure);margin:0 auto;padding:14px 22px;
+    display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+  }
+  .brand{display:flex;align-items:center;gap:10px;margin-inline-end:auto}
+  .mark{width:26px;height:26px;flex:none}
+  .brand b{font-weight:800;letter-spacing:-.02em;font-size:1.05rem}
+  .brand span{color:var(--muted);font-size:.82rem;font-weight:500}
+
+  .switch{
+    display:inline-flex;background:var(--surface);
+    border:1px solid var(--line-soft);border-radius:999px;padding:3px;
+  }
+  .switch button{
+    font:inherit;font-size:.83rem;font-weight:600;
+    color:var(--muted);background:none;border:0;cursor:pointer;
+    padding:6px 15px;border-radius:999px;transition:color .15s,background .15s;
+  }
+  .switch button:hover{color:var(--text)}
+  .switch button[aria-pressed="true"]{background:var(--primary);color:#fff}
+  .switch button:focus-visible{outline:2px solid var(--primary-soft);outline-offset:2px}
+
+  /* ---------- hero ---------- */
+  .hero{padding:62px 0 40px;border-bottom:1px solid var(--line-soft)}
+  h1{
+    font-size:clamp(2rem,6vw,2.9rem);line-height:1.12;
+    letter-spacing:-.035em;font-weight:800;margin:0 0 14px;
+  }
+  html[dir="rtl"] h1{letter-spacing:0;line-height:1.3}
+  .lede{color:var(--muted);font-size:1.06rem;margin:0 0 30px;max-width:58ch}
+  .stamp{color:var(--muted);font-size:.85rem;margin:0}
+
+  /* summary panel — the genuinely distinctive fact about this app */
+  .glance{
+    margin-top:34px;border:1px solid var(--line);border-radius:14px;
+    background:linear-gradient(180deg,var(--surface-2),var(--surface));
+    overflow:hidden;
+  }
+  .glance h2{
+    margin:0;padding:16px 20px;font-size:.95rem;font-weight:700;
+    border-bottom:1px solid var(--line-soft);letter-spacing:-.01em;
+  }
+  .glance ul{list-style:none;margin:0;padding:8px 0}
+  .glance li{
+    display:flex;gap:12px;align-items:flex-start;
+    padding:9px 20px;font-size:.95rem;
+  }
+  .glance .tick{flex:none;width:17px;height:17px;margin-top:5px}
+  .glance li span{color:var(--muted)}
+  .glance li b{color:var(--text);font-weight:600}
+
+  /* ---------- tabs ---------- */
+  nav.docs{
+    display:flex;gap:26px;border-bottom:1px solid var(--line-soft);
+    margin-top:48px;
+  }
+  nav.docs a{
+    color:var(--muted);text-decoration:none;font-weight:600;font-size:.95rem;
+    padding:13px 2px;border-bottom:2px solid transparent;margin-bottom:-1px;
+    transition:color .15s;
+  }
+  nav.docs a:hover{color:var(--text)}
+  nav.docs a.on{color:var(--text);border-bottom-color:var(--primary)}
+  nav.docs a:focus-visible{outline:2px solid var(--primary-soft);outline-offset:3px;border-radius:3px}
+
+  /* ---------- body copy ---------- */
+  main{padding:8px 0 90px}
+  section.doc{display:none}
+  section.doc.on{display:block}
+
+  h2.rule{
+    font-size:1.2rem;font-weight:700;letter-spacing:-.02em;
+    margin:46px 0 12px;padding-top:4px;scroll-margin-top:90px;
+  }
+  html[dir="rtl"] h2.rule{letter-spacing:0}
+  h2.rule .n{
+    color:var(--primary-soft);font-variant-numeric:tabular-nums;
+    margin-inline-end:10px;font-weight:700;
+  }
+  h3{font-size:1rem;font-weight:700;margin:28px 0 8px;color:var(--text)}
+  p{margin:0 0 15px;color:#DADEF0}
+  ul.body{margin:0 0 15px;padding-inline-start:22px;color:#DADEF0}
+  ul.body li{margin-bottom:8px}
+  ul.body li::marker{color:var(--primary-soft)}
+  a{color:var(--primary-soft)}
+  a:focus-visible{outline:2px solid var(--primary-soft);outline-offset:2px;border-radius:2px}
+
+  .note{
+    border-inline-start:3px solid var(--primary);
+    background:var(--surface);border-radius:0 10px 10px 0;
+    padding:15px 18px;margin:20px 0;color:#DADEF0;font-size:.95rem;
+  }
+  html[dir="rtl"] .note{border-radius:10px 0 0 10px}
+  .note p:last-child{margin-bottom:0}
+
+  table{
+    width:100%;border-collapse:collapse;margin:18px 0 22px;font-size:.93rem;
+    border:1px solid var(--line-soft);border-radius:10px;overflow:hidden;
+  }
+  th,td{
+    text-align:start;padding:11px 14px;
+    border-bottom:1px solid var(--line-soft);vertical-align:top;
+  }
+  th{background:var(--surface);font-weight:600;color:var(--text);font-size:.85rem}
+  td{color:#DADEF0}
+  tr:last-child td{border-bottom:0}
+
+  code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:.88em;background:var(--surface-2);
+    padding:2px 6px;border-radius:5px;color:var(--primary-soft);
+  }
+
+  /* ---------- footer ---------- */
+  footer{
+    border-top:1px solid var(--line-soft);padding:34px 0 60px;
+    color:var(--muted);font-size:.9rem;
+  }
+  footer b{color:var(--text)}
+  footer p{color:var(--muted);margin:0 0 8px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <div class="brand">
+      <svg class="mark" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+        <path d="M32 6 52 50H40L32 32 24 50H12L32 6Z" fill="#fff"/>
+        <path d="M32 22 38 34 32 30 26 34 32 22Z" fill="#0B0F1A"/>
+      </svg>
+      <b>Vertex</b>
+      <span data-en="by Noctascent" data-ar="من نوكتاسنت">by Noctascent</span>
+    </div>
+    <div class="switch" role="group" aria-label="Language">
+      <button id="btn-en" aria-pressed="true">English</button>
+      <button id="btn-ar" aria-pressed="false">العربية</button>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="hero">
+    <h1 data-en="Privacy &amp; Terms" data-ar="الخصوصية والشروط">Privacy &amp; Terms</h1>
+    <p class="lede"
+       data-en="Vertex keeps your tasks, habits and focus sessions on your own device. This page explains exactly what we hold, what we don't, and the rules for using the app."
+       data-ar="يحتفظ فيرتكس بمهامك وعاداتك وجلسات تركيزك على جهازك أنت. توضح هذه الصفحة بالضبط ما نحتفظ به، وما لا نحتفظ به، وقواعد استخدام التطبيق.">
+      Vertex keeps your tasks, habits and focus sessions on your own device. This page explains exactly what we hold, what we don't, and the rules for using the app.
+    </p>
+    <p class="stamp" data-en="Last updated: 15 September 2026" data-ar="آخر تحديث: ١٥ سبتمبر ٢٠٢٦">Last updated: 15 September 2026</p>
+
+    <div class="glance">
+      <h2 data-en="The short version" data-ar="باختصار">The short version</h2>
+      <ul>
+        <li>
+          <svg class="tick" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="#4ADE80" stroke-width="1.6"/><path d="M6 10.4l2.6 2.6L14 7.6" stroke="#4ADE80" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span data-en="&lt;b&gt;Your tasks and habits never leave your phone.&lt;/b&gt; They live in a local database we cannot read."
+                data-ar="&lt;b&gt;مهامك وعاداتك لا تغادر جهازك أبداً.&lt;/b&gt; تُحفظ في قاعدة بيانات محلية لا يمكننا الاطلاع عليها."><b>Your tasks and habits never leave your phone.</b> They live in a local database we cannot read.</span>
+        </li>
+        <li>
+          <svg class="tick" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="#4ADE80" stroke-width="1.6"/><path d="M6 10.4l2.6 2.6L14 7.6" stroke="#4ADE80" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span data-en="&lt;b&gt;We hold your email and an account ID.&lt;/b&gt; That is what an account needs to exist."
+                data-ar="&lt;b&gt;نحتفظ ببريدك الإلكتروني ومعرّف حساب.&lt;/b&gt; هذا ما يحتاجه الحساب ليوجد."><b>We hold your email and an account ID.</b> That is what an account needs to exist.</span>
+        </li>
+        <li>
+          <svg class="tick" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="#4ADE80" stroke-width="1.6"/><path d="M6 10.4l2.6 2.6L14 7.6" stroke="#4ADE80" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span data-en="&lt;b&gt;No ads, no ad identifier, no tracking.&lt;/b&gt; The app ships no advertising or analytics SDK."
+                data-ar="&lt;b&gt;لا إعلانات، ولا معرّف إعلاني، ولا تتبّع.&lt;/b&gt; لا يتضمن التطبيق أي أدوات إعلانية أو تحليلية."><b>No ads, no ad identifier, no tracking.</b> The app ships no advertising or analytics SDK.</span>
+        </li>
+        <li>
+          <svg class="tick" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="#4ADE80" stroke-width="1.6"/><path d="M6 10.4l2.6 2.6L14 7.6" stroke="#4ADE80" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span data-en="&lt;b&gt;We never sell your data.&lt;/b&gt; There is nothing to sell, and we would not."
+                data-ar="&lt;b&gt;لا نبيع بياناتك أبداً.&lt;/b&gt; لا يوجد ما يُباع، ولن نفعل ذلك."><b>We never sell your data.</b> There is nothing to sell, and we would not.</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <nav class="docs">
+    <a href="#privacy" id="tab-privacy" class="on" data-en="Privacy Policy" data-ar="سياسة الخصوصية">Privacy Policy</a>
+    <a href="#terms" id="tab-terms" data-en="Terms of Service" data-ar="شروط الاستخدام">Terms of Service</a>
+  </nav>
+
+  <main>
+    <!-- ============ PRIVACY ============ -->
+    <section class="doc on" id="privacy">
+
+      <h2 class="rule"><span class="n">1</span><span data-en="Who we are" data-ar="من نحن">Who we are</span></h2>
+      <p data-en="Vertex is a personal productivity app for tasks, habits and focus sessions, developed by Noctascent. Where this page says &quot;we&quot; or &quot;us&quot;, it means Noctascent. You can reach us at noctascent@gmail.com."
+         data-ar="فيرتكس تطبيق إنتاجية شخصية للمهام والعادات وجلسات التركيز، من تطوير نوكتاسنت. حين تقول هذه الصفحة «نحن»، فالمقصود نوكتاسنت. يمكنك التواصل معنا على noctascent@gmail.com.">Vertex is a personal productivity app for tasks, habits and focus sessions, developed by Noctascent. Where this page says "we" or "us", it means Noctascent. You can reach us at noctascent@gmail.com.</p>
+
+      <h2 class="rule"><span class="n">2</span><span data-en="What we collect" data-ar="ما الذي نجمعه">What we collect</span></h2>
+      <p data-en="Only what an account and a working app require:"
+         data-ar="فقط ما يحتاجه الحساب وعمل التطبيق:">Only what an account and a working app require:</p>
+
+      <table>
+        <thead><tr>
+          <th data-en="Information" data-ar="المعلومة">Information</th>
+          <th data-en="When" data-ar="متى">When</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td data-en="Email address" data-ar="البريد الإلكتروني">Email address</td>
+            <td data-en="When you create an account" data-ar="عند إنشاء الحساب">When you create an account</td>
+          </tr>
+          <tr>
+            <td data-en="Account identifier (a random ID)" data-ar="معرّف الحساب (رقم عشوائي)">Account identifier (a random ID)</td>
+            <td data-en="Generated when your account is created" data-ar="يُنشأ عند إنشاء الحساب">Generated when your account is created</td>
+          </tr>
+          <tr>
+            <td data-en="Display name and profile photo" data-ar="اسم العرض وصورة الملف">Display name and profile photo</td>
+            <td data-en="Only if you sign in with Google — provided by Google, read-only" data-ar="فقط إذا سجّلت الدخول عبر Google — تأتي من Google للعرض فقط">Only if you sign in with Google — provided by Google, read-only</td>
+          </tr>
+          <tr>
+            <td data-en="Crash report: error details, device model, OS version, an anonymous install ID" data-ar="تقرير عطل: تفاصيل الخطأ، طراز الجهاز، إصدار النظام، معرّف تثبيت مجهول">Crash report: error details, device model, OS version, an anonymous install ID</td>
+            <td data-en="Only if the app crashes, and only in public releases" data-ar="فقط عند تعطّل التطبيق، وفي الإصدارات العامة فقط">Only if the app crashes, and only in public releases</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p data-en="We do not collect your location, contacts, photos, advertising identifier, or browsing activity. The app contains no advertising SDK and no analytics SDK."
+         data-ar="لا نجمع موقعك الجغرافي، ولا جهات اتصالك، ولا صورك، ولا معرّفك الإعلاني، ولا نشاط تصفّحك. ولا يتضمّن التطبيق أي أداة إعلانية أو تحليلية.">We do not collect your location, contacts, photos, advertising identifier, or browsing activity. The app contains no advertising SDK and no analytics SDK.</p>
+
+      <h2 class="rule"><span class="n">3</span><span data-en="What stays on your device" data-ar="ما يبقى على جهازك">What stays on your device</span></h2>
+      <p data-en="Your tasks, habits, habit check-ins, focus sessions, profile details and app settings are stored in a database on your device only. We do not upload, copy or read them, and there is no cloud backup."
+         data-ar="مهامك وعاداتك وسجلات إنجازها وجلسات تركيزك وتفاصيل ملفك وإعدادات التطبيق، جميعها محفوظة في قاعدة بيانات على جهازك فقط. لا نرفعها ولا ننسخها ولا نطّلع عليها، ولا توجد نسخة احتياطية سحابية.">Your tasks, habits, habit check-ins, focus sessions, profile details and app settings are stored in a database on your device only. We do not upload, copy or read them, and there is no cloud backup.</p>
+      <div class="note">
+        <p data-en="Because there is no cloud copy, uninstalling Vertex deletes this data permanently, and it does not transfer to a new phone. Use Export Data in Settings before you uninstall or switch devices."
+           data-ar="ولأنه لا توجد نسخة سحابية، فإن حذف فيرتكس يمحو هذه البيانات نهائياً، ولا تنتقل إلى جهاز جديد. استخدم «تصدير البيانات» من الإعدادات قبل الحذف أو تغيير الجهاز.">Because there is no cloud copy, uninstalling Vertex deletes this data permanently, and it does not transfer to a new phone. Use Export Data in Settings before you uninstall or switch devices.</p>
+      </div>
+
+      <h2 class="rule"><span class="n">4</span><span data-en="Exporting your data" data-ar="تصدير بياناتك">Exporting your data</span></h2>
+      <p data-en="Export Data creates a file containing your local data and hands it to your device's share sheet. You choose where it goes. We never receive a copy."
+           data-ar="ينشئ «تصدير البيانات» ملفاً يحوي بياناتك المحلية ويسلّمه لقائمة المشاركة في جهازك. أنت من يحدد وجهته. ولا نتلقى نسخة منه أبداً.">Export Data creates a file containing your local data and hands it to your device's share sheet. You choose where it goes. We never receive a copy.</p>
+
+      <h2 class="rule"><span class="n">5</span><span data-en="Why we hold it" data-ar="لماذا نحتفظ بها">Why we hold it</span></h2>
+      <ul class="body">
+        <li data-en="&lt;b&gt;Email and account ID&lt;/b&gt; — to create your account, sign you in, and keep you signed in."
+            data-ar="&lt;b&gt;البريد ومعرّف الحساب&lt;/b&gt; — لإنشاء حسابك وتسجيل دخولك وإبقائك مسجّلاً."><b>Email and account ID</b> — to create your account, sign you in, and keep you signed in.</li>
+        <li data-en="&lt;b&gt;Display name and photo&lt;/b&gt; — to show them on your profile screen."
+            data-ar="&lt;b&gt;اسم العرض والصورة&lt;/b&gt; — لعرضهما في شاشة ملفك الشخصي."><b>Display name and photo</b> — to show them on your profile screen.</li>
+        <li data-en="&lt;b&gt;Crash reports&lt;/b&gt; — to find and fix faults in the app."
+            data-ar="&lt;b&gt;تقارير الأعطال&lt;/b&gt; — لاكتشاف الأخطاء في التطبيق وإصلاحها."><b>Crash reports</b> — to find and fix faults in the app.</li>
+      </ul>
+      <p data-en="We do not sell your personal data, use it for advertising, or share it with anyone beyond the services in section 6."
+         data-ar="لا نبيع بياناتك الشخصية، ولا نستخدمها في الإعلانات، ولا نشاركها مع أي جهة خارج الخدمات المذكورة في البند ٦.">We do not sell your personal data, use it for advertising, or share it with anyone beyond the services in section 6.</p>
+
+      <h2 class="rule"><span class="n">6</span><span data-en="Services we rely on" data-ar="الخدمات التي نعتمد عليها">Services we rely on</span></h2>
+      <p data-en="Two services, both operated by Google:"
+         data-ar="خدمتان، كلتاهما تديرهما Google:">Two services, both operated by Google:</p>
+      <ul class="body">
+        <li data-en="&lt;b&gt;Firebase Authentication&lt;/b&gt; — stores your email, account ID and, for Google sign-in, your name and photo. Passwords are stored by Firebase in hashed form; we never see them."
+            data-ar="&lt;b&gt;Firebase Authentication&lt;/b&gt; — تحفظ بريدك ومعرّف حسابك، وكذلك اسمك وصورتك عند الدخول عبر Google. تُحفظ كلمات المرور لدى Firebase مشفّرة، ولا نطّلع عليها إطلاقاً."><b>Firebase Authentication</b> — stores your email, account ID and, for Google sign-in, your name and photo. Passwords are stored by Firebase in hashed form; we never see them.</li>
+        <li data-en="&lt;b&gt;Firebase Crashlytics&lt;/b&gt; — receives crash reports from public releases."
+            data-ar="&lt;b&gt;Firebase Crashlytics&lt;/b&gt; — تتلقى تقارير الأعطال من الإصدارات العامة."><b>Firebase Crashlytics</b> — receives crash reports from public releases.</li>
+      </ul>
+      <p data-en="Google's handling of that data is governed by the &lt;a href=&quot;https://policies.google.com/privacy&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Google Privacy Policy&lt;/a&gt;. If you choose Google sign-in, Google also processes the sign-in itself. Data may be processed on servers outside your country."
+         data-ar="تخضع معالجة Google لهذه البيانات لـ&lt;a href=&quot;https://policies.google.com/privacy&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;سياسة خصوصية Google&lt;/a&gt;. وإذا اخترت الدخول عبر Google، فإن Google تعالج عملية الدخول نفسها. وقد تُعالج البيانات على خوادم خارج بلدك.">Google's handling of that data is governed by the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>. If you choose Google sign-in, Google also processes the sign-in itself. Data may be processed on servers outside your country.</p>
+
+      <h2 class="rule"><span class="n">7</span><span data-en="Permissions the app requests" data-ar="الأذونات التي يطلبها التطبيق">Permissions the app requests</span></h2>
+      <p data-en="Internet access, network state, and access to Google services. All three exist to make sign-in and crash reporting work. The app requests no permission for your camera, location, contacts, storage or advertising identifier."
+         data-ar="الوصول إلى الإنترنت، وحالة الشبكة، والوصول إلى خدمات Google. وجود هذه الثلاثة لتشغيل تسجيل الدخول وتقارير الأعطال فقط. ولا يطلب التطبيق أي إذن للكاميرا أو الموقع أو جهات الاتصال أو التخزين أو المعرّف الإعلاني.">Internet access, network state, and access to Google services. All three exist to make sign-in and crash reporting work. The app requests no permission for your camera, location, contacts, storage or advertising identifier.</p>
+
+      <h2 class="rule"><span class="n">8</span><span data-en="How long we keep it" data-ar="مدة الاحتفاظ">How long we keep it</span></h2>
+      <p data-en="Account data is kept while your account exists. Crash reports are retained by Firebase Crashlytics for up to 90 days. Deleting your account removes your account data from Firebase Authentication."
+         data-ar="نحتفظ ببيانات الحساب ما دام حسابك قائماً. وتحتفظ Firebase Crashlytics بتقارير الأعطال حتى ٩٠ يوماً. وحذف حسابك يزيل بيانات حسابك من Firebase Authentication.">Account data is kept while your account exists. Crash reports are retained by Firebase Crashlytics for up to 90 days. Deleting your account removes your account data from Firebase Authentication.</p>
+
+      <h2 class="rule"><span class="n">9</span><span data-en="Your rights" data-ar="حقوقك">Your rights</span></h2>
+      <p data-en="You can ask us to show you what we hold about you, correct it, delete it, or send it to you in a portable form. Email noctascent@gmail.com and we will respond within 30 days. Deleting your account is free and permanent."
+         data-ar="يمكنك أن تطلب منا الاطلاع على ما نحتفظ به عنك، أو تصحيحه، أو حذفه، أو إرساله إليك بصيغة قابلة للنقل. راسلنا على noctascent@gmail.com وسنرد خلال ٣٠ يوماً. وحذف الحساب مجاني ونهائي.">You can ask us to show you what we hold about you, correct it, delete it, or send it to you in a portable form. Email noctascent@gmail.com and we will respond within 30 days. Deleting your account is free and permanent.</p>
+      <p data-en="If you are in the European Economic Area or the United Kingdom, our legal bases are performance of a contract for account data, and legitimate interest for crash reports. You may also object to processing, request restriction, or complain to your local data protection authority."
+         data-ar="إذا كنت في المنطقة الاقتصادية الأوروبية أو المملكة المتحدة، فالأساس القانوني لدينا هو تنفيذ العقد بالنسبة لبيانات الحساب، والمصلحة المشروعة بالنسبة لتقارير الأعطال. ويحق لك الاعتراض على المعالجة أو طلب تقييدها أو تقديم شكوى لجهة حماية البيانات المختصة في بلدك.">If you are in the European Economic Area or the United Kingdom, our legal bases are performance of a contract for account data, and legitimate interest for crash reports. You may also object to processing, request restriction, or complain to your local data protection authority.</p>
+      <p data-en="If you are in Saudi Arabia, this policy is written to align with the Personal Data Protection Law (PDPL)."
+         data-ar="وإذا كنت في المملكة العربية السعودية، فقد صيغت هذه السياسة بما يتوافق مع نظام حماية البيانات الشخصية.">If you are in Saudi Arabia, this policy is written to align with the Personal Data Protection Law (PDPL).</p>
+
+      <h2 class="rule"><span class="n">10</span><span data-en="Age" data-ar="العمر">Age</span></h2>
+      <p data-en="Vertex is intended for people aged 13 and over, and is not directed at children. We do not knowingly collect data from anyone under 13; if you believe a child has given us data, email us and we will delete it. In countries where the age of digital consent is higher than 13, you need a parent or guardian's consent below that age."
+         data-ar="فيرتكس موجّه لمن أعمارهم ١٣ سنة فأكثر، وليس موجّهاً للأطفال. ولا نجمع عن علم أي بيانات ممن هم دون ١٣؛ وإذا كنت تعتقد أن طفلاً زوّدنا ببياناته فراسلنا وسنحذفها. وفي الدول التي يزيد فيها سن الموافقة الرقمية عن ١٣، يلزم إذن ولي الأمر لمن هم دون ذلك السن.">Vertex is intended for people aged 13 and over, and is not directed at children. We do not knowingly collect data from anyone under 13; if you believe a child has given us data, email us and we will delete it. In countries where the age of digital consent is higher than 13, you need a parent or guardian's consent below that age.</p>
+
+      <h2 class="rule"><span class="n">11</span><span data-en="Security" data-ar="الأمان">Security</span></h2>
+      <p data-en="Account data travels over encrypted connections and is stored by Firebase encrypted at rest. Your device data is protected by your device's own security. No system is perfectly secure, so keep your password private and your device locked."
+         data-ar="تنتقل بيانات الحساب عبر اتصالات مشفّرة وتُخزّن لدى Firebase مشفّرة. أما بيانات جهازك فتحميها إجراءات أمان جهازك نفسه. ولا يوجد نظام آمن تماماً، فاحرص على سرية كلمة مرورك وقفل جهازك.">Account data travels over encrypted connections and is stored by Firebase encrypted at rest. Your device data is protected by your device's own security. No system is perfectly secure, so keep your password private and your device locked.</p>
+
+      <h2 class="rule"><span class="n">12</span><span data-en="Changes to this policy" data-ar="تعديلات هذه السياسة">Changes to this policy</span></h2>
+      <p data-en="We will update this page and change the date at the top. If a change materially affects what we collect or why, we will tell you in the app before it takes effect."
+         data-ar="سنحدّث هذه الصفحة ونغيّر التاريخ في أعلاها. وإذا أثّر التعديل جوهرياً فيما نجمعه أو في سببه، فسنخبرك داخل التطبيق قبل سريانه.">We will update this page and change the date at the top. If a change materially affects what we collect or why, we will tell you in the app before it takes effect.</p>
+
+      <h2 class="rule"><span class="n">13</span><span data-en="Contact" data-ar="التواصل">Contact</span></h2>
+      <p data-en="Questions, requests or complaints: noctascent@gmail.com"
+         data-ar="للأسئلة أو الطلبات أو الشكاوى: noctascent@gmail.com">Questions, requests or complaints: noctascent@gmail.com</p>
+    </section>
+
+    <!-- ============ TERMS ============ -->
+    <section class="doc" id="terms">
+
+      <h2 class="rule"><span class="n">1</span><span data-en="Agreeing to these terms" data-ar="الموافقة على هذه الشروط">Agreeing to these terms</span></h2>
+      <p data-en="By creating an account or using Vertex, you agree to these terms. If you do not agree, please do not use the app."
+         data-ar="بإنشائك حساباً أو استخدامك فيرتكس، فإنك توافق على هذه الشروط. وإذا لم توافق عليها، فالرجاء عدم استخدام التطبيق.">By creating an account or using Vertex, you agree to these terms. If you do not agree, please do not use the app.</p>
+
+      <h2 class="rule"><span class="n">2</span><span data-en="What Vertex is" data-ar="ما هو فيرتكس">What Vertex is</span></h2>
+      <p data-en="Vertex is a personal productivity app for managing tasks, tracking habits and running focus sessions. It is provided by Noctascent for your personal use."
+         data-ar="فيرتكس تطبيق إنتاجية شخصية لإدارة المهام وتتبّع العادات وتشغيل جلسات التركيز. تقدّمه نوكتاسنت لاستخدامك الشخصي.">Vertex is a personal productivity app for managing tasks, tracking habits and running focus sessions. It is provided by Noctascent for your personal use.</p>
+
+      <h2 class="rule"><span class="n">3</span><span data-en="Your account" data-ar="حسابك">Your account</span></h2>
+      <p data-en="An account is required to use Vertex. Give accurate information when you create one, keep your password to yourself, and tell us if you think someone else has access. You are responsible for what happens under your account."
+         data-ar="يلزم وجود حساب لاستخدام فيرتكس. قدّم معلومات صحيحة عند إنشائه، واحتفظ بكلمة مرورك لنفسك، وأخبرنا إذا اشتبهت في وصول شخص آخر إليه. وأنت مسؤول عمّا يجري تحت حسابك.">An account is required to use Vertex. Give accurate information when you create one, keep your password to yourself, and tell us if you think someone else has access. You are responsible for what happens under your account.</p>
+      <p data-en="You must be at least 13 years old, or older where your country requires it."
+         data-ar="يجب ألا يقل عمرك عن ١٣ سنة، أو أكثر إذا كان نظام بلدك يشترط ذلك.">You must be at least 13 years old, or older where your country requires it.</p>
+
+      <h2 class="rule"><span class="n">4</span><span data-en="Your data is yours" data-ar="بياناتك ملكك">Your data is yours</span></h2>
+      <p data-en="The tasks, habits and notes you create belong to you. We claim no ownership over them and no right to use them. They are stored on your device, not on our servers."
+         data-ar="المهام والعادات والملاحظات التي تنشئها ملك لك. لا ندّعي ملكيتها ولا أي حق في استخدامها. وهي محفوظة على جهازك لا على خوادمنا.">The tasks, habits and notes you create belong to you. We claim no ownership over them and no right to use them. They are stored on your device, not on our servers.</p>
+      <div class="note">
+        <p data-en="Because your data is stored only on your device, we cannot recover it. If you uninstall the app, reset your phone, or lose the device, the data is gone. Export it regularly if it matters to you."
+           data-ar="ولأن بياناتك محفوظة على جهازك فقط، لا يمكننا استرجاعها. فإذا حذفت التطبيق أو أعدت ضبط جهازك أو فقدته، ضاعت البيانات. صدّرها بانتظام إن كانت مهمة لك.">Because your data is stored only on your device, we cannot recover it. If you uninstall the app, reset your phone, or lose the device, the data is gone. Export it regularly if it matters to you.</p>
+      </div>
+
+      <h2 class="rule"><span class="n">5</span><span data-en="Using the app fairly" data-ar="الاستخدام العادل">Using the app fairly</span></h2>
+      <p data-en="Do not use Vertex to break the law, attempt to access other people's accounts, interfere with the service, or reverse-engineer, decompile or resell the app."
+         data-ar="لا تستخدم فيرتكس لمخالفة النظام، ولا لمحاولة الوصول إلى حسابات الآخرين، ولا لتعطيل الخدمة، ولا لعكس هندسة التطبيق أو فك ترجمته أو إعادة بيعه.">Do not use Vertex to break the law, attempt to access other people's accounts, interfere with the service, or reverse-engineer, decompile or resell the app.</p>
+
+      <h2 class="rule"><span class="n">6</span><span data-en="Free and paid plans" data-ar="الخطة المجانية والمدفوعة">Free and paid plans</span></h2>
+      <p data-en="Vertex offers a free plan with some limits, and may offer paid subscriptions with additional features. Current prices and limits are shown in the app before you buy anything."
+         data-ar="يقدّم فيرتكس خطة مجانية ببعض الحدود، وقد يقدّم اشتراكات مدفوعة بمزايا إضافية. وتُعرض الأسعار والحدود الحالية داخل التطبيق قبل أي عملية شراء.">Vertex offers a free plan with some limits, and may offer paid subscriptions with additional features. Current prices and limits are shown in the app before you buy anything.</p>
+      <p data-en="Subscriptions are billed through Google Play. They renew automatically until cancelled, and you cancel or manage them in your Google Play account, not here. Refunds follow Google Play's refund policy. If we change a subscription price, we will tell you before it applies to you."
+         data-ar="تُحصَّل الاشتراكات عبر Google Play، وتتجدّد تلقائياً حتى تُلغى، وإلغاؤها وإدارتها يتم من حسابك في Google Play لا من هنا. وتخضع الاستردادات لسياسة Google Play. وإذا غيّرنا سعر اشتراك، فسنخبرك قبل سريانه عليك.">Subscriptions are billed through Google Play. They renew automatically until cancelled, and you cancel or manage them in your Google Play account, not here. Refunds follow Google Play's refund policy. If we change a subscription price, we will tell you before it applies to you.</p>
+
+      <h2 class="rule"><span class="n">7</span><span data-en="The app itself" data-ar="التطبيق نفسه">The app itself</span></h2>
+      <p data-en="Vertex, its name, design, and code belong to Noctascent. These terms give you permission to use the app, not to own any part of it."
+         data-ar="فيرتكس واسمه وتصميمه وشيفرته ملك لنوكتاسنت. وتمنحك هذه الشروط إذناً باستخدام التطبيق، لا ملكية أي جزء منه.">Vertex, its name, design, and code belong to Noctascent. These terms give you permission to use the app, not to own any part of it.</p>
+
+      <h2 class="rule"><span class="n">8</span><span data-en="No guarantees" data-ar="بلا ضمانات">No guarantees</span></h2>
+      <p data-en="Vertex is provided as it is. We do not promise it will be available without interruption, free of faults, or fit for any particular purpose. It is a productivity tool, not a medical, financial or professional service, and you should not rely on it as one."
+         data-ar="يُقدَّم فيرتكس كما هو. ولا نَعِد بأنه سيعمل دون انقطاع أو دون أخطاء أو أنه مناسب لغرض بعينه. وهو أداة إنتاجية، لا خدمة طبية أو مالية أو مهنية، فلا ينبغي الاعتماد عليه بهذه الصفة.">Vertex is provided as it is. We do not promise it will be available without interruption, free of faults, or fit for any particular purpose. It is a productivity tool, not a medical, financial or professional service, and you should not rely on it as one.</p>
+
+      <h2 class="rule"><span class="n">9</span><span data-en="Limits on our liability" data-ar="حدود مسؤوليتنا">Limits on our liability</span></h2>
+      <p data-en="To the extent the law allows, Noctascent is not liable for indirect or consequential loss, lost data, lost profits, or loss arising from your use of or inability to use the app. Where liability cannot be excluded, it is limited to the amount you paid us in the twelve months before the claim. Nothing here limits rights you have under consumer law that cannot be waived."
+         data-ar="إلى الحد الذي يسمح به النظام، لا تتحمل نوكتاسنت مسؤولية الأضرار غير المباشرة أو التبعية، ولا فقدان البيانات أو الأرباح، ولا الخسائر الناشئة عن استخدامك للتطبيق أو تعذّر استخدامك له. وحيثما تعذّر استبعاد المسؤولية، فإنها تقتصر على ما دفعته لنا خلال الاثني عشر شهراً السابقة للمطالبة. ولا يحدّ أي مما سبق من حقوقك النظامية كمستهلك التي لا يجوز التنازل عنها.">To the extent the law allows, Noctascent is not liable for indirect or consequential loss, lost data, lost profits, or loss arising from your use of or inability to use the app. Where liability cannot be excluded, it is limited to the amount you paid us in the twelve months before the claim. Nothing here limits rights you have under consumer law that cannot be waived.</p>
+
+      <h2 class="rule"><span class="n">10</span><span data-en="Ending your use" data-ar="إنهاء الاستخدام">Ending your use</span></h2>
+      <p data-en="You can stop using Vertex at any time by deleting your account and uninstalling the app. We may suspend or close an account that breaks these terms, and will explain why unless we are legally prevented from doing so."
+         data-ar="يمكنك التوقف عن استخدام فيرتكس متى شئت بحذف حسابك وإزالة التطبيق. ويجوز لنا تعليق أو إغلاق أي حساب يخالف هذه الشروط، وسنوضح السبب ما لم يمنعنا النظام من ذلك.">You can stop using Vertex at any time by deleting your account and uninstalling the app. We may suspend or close an account that breaks these terms, and will explain why unless we are legally prevented from doing so.</p>
+
+      <h2 class="rule"><span class="n">11</span><span data-en="Changes to these terms" data-ar="تعديلات هذه الشروط">Changes to these terms</span></h2>
+      <p data-en="We may update these terms. The date at the top will change, and material changes will be announced in the app. Continuing to use Vertex after a change means you accept it."
+         data-ar="قد نحدّث هذه الشروط. وسيتغيّر التاريخ في أعلى الصفحة، وسنعلن التعديلات الجوهرية داخل التطبيق. واستمرارك في استخدام فيرتكس بعد التعديل يعني قبولك به.">We may update these terms. The date at the top will change, and material changes will be announced in the app. Continuing to use Vertex after a change means you accept it.</p>
+
+      <h2 class="rule"><span class="n">12</span><span data-en="Governing law" data-ar="النظام الواجب التطبيق">Governing law</span></h2>
+      <p data-en="These terms are governed by the laws of the Kingdom of Saudi Arabia, and disputes fall to its competent courts. If you are a consumer elsewhere, this does not remove protections you have under your own country's law."
+         data-ar="تخضع هذه الشروط لأنظمة المملكة العربية السعودية، وتختص محاكمها المختصة بالنظر في المنازعات. وإذا كنت مستهلكاً في بلد آخر، فلا يُسقط ذلك الحمايات المقررة لك بموجب نظام بلدك.">These terms are governed by the laws of the Kingdom of Saudi Arabia, and disputes fall to its competent courts. If you are a consumer elsewhere, this does not remove protections you have under your own country's law.</p>
+
+      <h2 class="rule"><span class="n">13</span><span data-en="Contact" data-ar="التواصل">Contact</span></h2>
+      <p data-en="noctascent@gmail.com" data-ar="noctascent@gmail.com">noctascent@gmail.com</p>
+    </section>
+  </main>
+
+  <footer>
+    <p data-en="&lt;b&gt;Vertex&lt;/b&gt; — Reach Your Peak" data-ar="&lt;b&gt;Vertex&lt;/b&gt; — Reach Your Peak"><b>Vertex</b> — Reach Your Peak</p>
+    <p data-en="Noctascent · noctascent@gmail.com" data-ar="نوكتاسنت · noctascent@gmail.com">Noctascent · noctascent@gmail.com</p>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var htmlEl = document.documentElement;
+  var btnEn = document.getElementById('btn-en');
+  var btnAr = document.getElementById('btn-ar');
+
+  function setLang(lang){
+    var isAr = lang === 'ar';
+    htmlEl.lang = isAr ? 'ar' : 'en';
+    htmlEl.dir  = isAr ? 'rtl' : 'ltr';
+    btnEn.setAttribute('aria-pressed', String(!isAr));
+    btnAr.setAttribute('aria-pressed', String(isAr));
+    document.title = isAr
+      ? 'فيرتكس — سياسة الخصوصية وشروط الاستخدام'
+      : 'Vertex — Privacy Policy & Terms of Service';
+
+    var nodes = document.querySelectorAll('[data-en]');
+    for (var i = 0; i < nodes.length; i++){
+      var v = nodes[i].getAttribute(isAr ? 'data-ar' : 'data-en');
+      if (v !== null) nodes[i].innerHTML = v;
+    }
+  }
+
+  btnEn.addEventListener('click', function(){ setLang('en'); });
+  btnAr.addEventListener('click', function(){ setLang('ar'); });
+
+  var tabP = document.getElementById('tab-privacy');
+  var tabT = document.getElementById('tab-terms');
+  var secP = document.getElementById('privacy');
+  var secT = document.getElementById('terms');
+
+  function show(which){
+    var privacy = which !== 'terms';
+    secP.classList.toggle('on', privacy);
+    secT.classList.toggle('on', !privacy);
+    tabP.classList.toggle('on', privacy);
+    tabT.classList.toggle('on', !privacy);
+  }
+
+  tabP.addEventListener('click', function(e){ e.preventDefault(); show('privacy'); history.replaceState(null,'','#privacy'); });
+  tabT.addEventListener('click', function(e){ e.preventDefault(); show('terms');   history.replaceState(null,'','#terms');   });
+
+  if (location.hash === '#terms') show('terms');
+
+  // Open in Arabic for Arabic-speaking visitors, without overriding a later click.
+  if ((navigator.language || '').toLowerCase().indexOf('ar') === 0) setLang('ar');
+})();
+</script>
+</body>
+</html>
